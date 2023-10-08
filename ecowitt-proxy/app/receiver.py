@@ -4,6 +4,11 @@ import os
 import sys
 import logging
 
+def log_message(message):
+    now = datetime.now()
+    dt_string = now.strftime("%Y-%m-%d %H:%M:%S")
+    print('[{}] {}'.format(dt_string, message), file=sys.stderr)
+
 app = Flask("Ecowitt Proxy")
 
 # Vars from environment variables
@@ -44,7 +49,8 @@ def logHomeAssistant():
     payload = request.form
 
     # Log payload to console
-    logging.debug("Received Payload: " + str(payload))
+    log_message("Received Payload: {}".format(str(payload)))
+    # logging.debug("Received Payload: " + str(payload))
 
     # Forward to Home Assistant
     response = requests.post(url=forward_url, data=payload, timeout=5, headers={'Authorization': 'Bearer ' + auth_token})
@@ -67,7 +73,9 @@ if __name__ == "__main__":
         exit(1)
 
     logging.info("Starting Home Assistant Ecowitt Proxy")
+    log_message("Starting Home Assistant Ecowitt Proxy")
     logging.info("HA Webhook URL: " + forward_url)
+    log_message("HA Webhook URL: {}").format(forward_url)
 
     # Suppress Flask development server startup message (not working?)
     cli = sys.modules['flask.cli']
