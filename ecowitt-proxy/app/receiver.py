@@ -9,7 +9,7 @@ app = Flask("Ecowitt Proxy")
 # Vars from environment variables
 # Not all of these are settable from the add-on configuration; however, I wanted to give extra
 # flexibility in case someone wanted to run this outside of a Home Assistant add-on.
-log_level = os.environ.get('ECOWITT_PROXY_LOG_LEVEL', 'INFO') # TODO
+log_level = os.environ.get('ECOWITT_PROXY_LOG_LEVEL', 'DEBUG') # TODO
 service_port = os.environ.get('ECOWITT_PROXY_PORT', '8081')
 ha_webhook_id = os.environ.get('HA_WEBHOOK_ID', 'no-webhook-id')
 base_url = os.environ.get('HA_BASE_URL', 'http://supervisor/core/api/webhook/')
