@@ -1,6 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 # Ecowitt Proxy Add-On
+## 0.1.18.1
 
+- Getting logging working to see error.
+  
 ## 0.1.18
 
 - Fixed TCP port mapping from settings.
