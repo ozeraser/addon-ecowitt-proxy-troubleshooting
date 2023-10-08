@@ -17,3 +17,7 @@ options:
 schema:
   Webhook_ID: str
   TCP_Port: int
+logger:
+  default: warning
+  logs:
+    homeassistant.components.python_script: debug
