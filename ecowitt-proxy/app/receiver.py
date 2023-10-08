@@ -50,7 +50,7 @@ def logHomeAssistant():
     payload = request.form
 
     # Log payload to console
-    log_message("Received Payload: {}".format(str(payload)))
+    log_message('Received Payload: "{}"'.format(str(payload)))
     # logging.debug("Received Payload: " + str(payload))
 
     # Forward to Home Assistant
@@ -76,7 +76,8 @@ if __name__ == "__main__":
     logging.info("Starting Home Assistant Ecowitt Proxy")
     log_message("Starting Home Assistant Ecowitt Proxy")
     logging.info("HA Webhook URL: " + forward_url)
-    log_message("HA Webhook URL: {}").format(forward_url)
+    log_message('HA base URL: "{}"').format(base_url)
+    log_message('HA Webhook URL: "{}"').format(forward_url)
 
     # Suppress Flask development server startup message (not working?)
     cli = sys.modules['flask.cli']
