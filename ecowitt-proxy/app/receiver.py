@@ -3,6 +3,7 @@ import requests
 import os
 import sys
 import logging
+from datetime import datetime
 
 def log_message(message):
     now = datetime.now()
