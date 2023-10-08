@@ -1,6 +1,6 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 # Ecowitt Proxy Add-On
-## 0.1.18.2
+## 0.1.18.3
 
 - Getting logging working to see error.
   
